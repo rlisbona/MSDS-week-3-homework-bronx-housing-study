@@ -24,7 +24,7 @@ detach(bk.sale)
 ## for now, let's look at 1-, 2-, and 3-family homes
 bk.homes <- bk.sale[which(grepl("FAMILY",bk.sale$building.class.category)),]
 dim(bk.homes)
-plot(log(bk.homes$gross.sqft),log(bk.homes$sale.price.n))
+plot(log(bk.homes$gross.sqft),log(bk.homes$sale.price.n), main = "log gross sqft x log sale price")
 summary(bk.homes[which(bk.homes$sale.price.n<100000),])
 
 
